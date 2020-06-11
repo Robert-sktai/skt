@@ -23,6 +23,7 @@ air = [
     "implicit==0.4.2",
     "tqdm==4.43.0",
     "matplotlib==3.2.1",
+    "sparktorch==0.1.2",
 ]
 
 setuptools.setup(
