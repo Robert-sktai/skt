@@ -323,8 +323,8 @@ def pandas_to_meta_table(
     df: pd.DataFrame,
     key: str,
     values: list,
-    edd: bool = False,
     aws_env: AWSENV = AWSENV.STG.value,
+    edd: bool = False,
 ) -> None:
     """
     Create or Update items of a meta_table from Pandas Dataframe
@@ -334,8 +334,8 @@ def pandas_to_meta_table(
         - df           :   (pd.DataFrame) input table
         - key          :   (str) key column in dataframe
         - values       :   (list) Dataframe columns for input
-        - edd          :   (bool) True if On-prem env is on EDD (default is False)
         - aws_env      :   (str) AWS ENV in 'stg / prd' (default is 'stg')
+        - edd          :   (bool) True if On-prem env is on EDD (default is False)
     """
     assert type(aws_env) == str
     assert method in ["create", "update"]
